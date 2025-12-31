@@ -26,7 +26,7 @@ import images from '~/assets/images';
 import Image from '~/components/Image';
 import SearchAccountsItem from '~/components/SearchAccountsItem';
 import Menu from '~/components/Popper/Menu';
-import { UploadIcon } from '~/components/Icons';
+import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -132,6 +132,17 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Upload Video">
                                 <button className={cx('action-btn')}>
                                     <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Message">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Inbox">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
