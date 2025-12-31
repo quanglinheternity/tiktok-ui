@@ -18,11 +18,25 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import SearchAccountsItem from '~/components/SearchAccountsItem';
 import Menu from '~/components/Popper/Menu';
+import { data } from 'react-router-dom';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'Tiếng việt',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng viet',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -42,6 +56,9 @@ function Header() {
     //         setSearchResult([1, 2, 3]);
     //     }, 0);
     // }, []);
+    const hanldMenuChange = (menuItem) => {
+        console.log(menuItem);
+    };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -80,7 +97,7 @@ function Header() {
                 <div className={cx('actions')}>
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={hanldMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
