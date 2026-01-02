@@ -52,7 +52,7 @@ const MENU_ITEMS = [
     },
 ];
 function Header() {
-    const currentUser = false;
+    const currentUser = true;
 
     const hanldMenuChange = (menuItem) => {
         console.log(menuItem);
@@ -118,7 +118,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sin-sg.tiktokcdn.com/tos-alisg-avt-0068/0aa2721f235d625985b0de45c8a80e58~tplv-tiktokx-cropcenter:300:300.webp?dr=14577&refresh_token=2fb18130&x-expires=1767254400&x-signature=R2fz%2BcNBORdiGXm7OSP3gMvuPug%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=c1333099&idc=my2"
+                                src=""
                                 alt="nguyen van a"
                                 fallBack="https://yt3.googleusercontent.com/Pa8wyxqTOkhu5DW_RvkiQIS7Bsa7OW7gSen-2WpaQsC2EqUAkgubAg1_QPc951pzpN2F2Q4_TA=s160-c-k-c0x00ffffff-no-rj"
                             />
