@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import { Wapper as PopperWapper } from '~/components/Popper';
 import SearchAccountsItem from '~/components/SearchAccountsItem';
 import styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SearchIcon } from '~/components/Icons';
-import { useDebounce } from '~/hoocks';
+import { useDebounce } from '~/hooks';
 const cx = classNames.bind(styles);
 function Search() {
     const [searchValue, setSearchValue] = useState('');

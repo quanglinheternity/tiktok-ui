@@ -12,7 +12,7 @@
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^16.3.1",
         "@testing-library/user-event": "^13.5.0",
-        "@tippyjs/react": "^4.2.6",
+        "@tippy/react": "^4.2.6",
         "axios": "^1.13.2",
         "classnames": "^2.5.1",
         "normalize.css": "^8.0.1",
@@ -26,7 +26,8 @@
         "babel-plugin-module-resolver": "^5.0.2",
         "customize-cra": "^1.0.0",
         "react-app-rewired": "^2.2.1",
-        "sass": "^1.97.1"
+        "sass": "^1.97.1",
+        "sass-loader": "^16.0.6"
     },
     "scripts": {
         "start": "react-app-rewired start",
