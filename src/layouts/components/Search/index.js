@@ -4,7 +4,7 @@ import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 
 import * as searchServices from '~/services/searchService';
-import { Wapper as PopperWapper } from '~/components/Popper';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
 import SearchAccountsItem from '~/components/SearchAccountsItem';
 import styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,12 +56,12 @@ function Search() {
                 visible={showResult && searchResult.length > 0}
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                        <PopperWapper>
+                        <PopperWrapper>
                             <h4 className={cx('search-title')}>Accounts</h4>
                             {searchResult.map((result) => (
                                 <SearchAccountsItem key={result.id} data={result} />
                             ))}
-                        </PopperWapper>
+                        </PopperWrapper>
                     </div>
                 )}
                 onClickOutside={handleHideResult}
